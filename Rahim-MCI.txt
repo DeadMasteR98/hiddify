@@ -17,8 +17,8 @@
                 "tag": "select",
                 "outbounds": [
                         "auto",
-                        "IP->Iran, Yotube:Geekmeek",
-                        "IP->Main, Yotube:Geekmeek"
+                        "IP->Iran, Telegram:DeadMasteR",
+                        "IP->Main, Telegram:DeadMasteR"
                 ],
                 "default": "auto"
                 },
@@ -26,15 +26,15 @@
                 "type": "urltest",
                 "tag": "auto",
                 "outbounds": [
-                        "IP->Iran, Yotube:Geekmeek",
-                        "IP->Main, Yotube:Geekmeek"
+                        "IP->Iran, Telegram:DeadMasteR",
+                        "IP->Main, Telegram:DeadMasteR"
                 ],
                 "url": "http://cp.cloudflare.com/",
                 "interval": "10m0s"
                 },
                 {
                 "type": "wireguard",
-                "tag": "IP->Iran, Yotube:Geekmeek",
+                "tag": "IP->Iran, Telegram:DeadMasteR",
                 "local_address": [
                         "172.16.0.2/32",
                         "2606:4700:110:80c7:fb3:78d9:4e57:993b/128"
@@ -49,8 +49,8 @@
                 },
                 {
                 "type": "wireguard",
-                "tag": "IP->Main, Yotube:Geekmeek",
-                "detour": "IP->Iran, Yotube:Geekmeek",
+                "tag": "IP->Main, Telegram:DeadMasteR",
+                "detour": "IP->Iran, Telegram:DeadMasteR",
                 "local_address": [
                         "172.16.0.2/32",
                         "2606:4700:110:8e9c:62bd:db54:29c:4ed8/128"
