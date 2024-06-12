@@ -1,1 +1,86 @@
-{ "route": { "geoip": { "path": "geo-assets\\sagernet-sing-geoip-geoip.db" }, "geosite": { "path": "geo-assets\\sagernet-sing-geosite-geosite.db" }, "rules": [ { "inbound": "dns-in", "outbound": "dns-out" }, { "port": 53, "outbound": "dns-out" }, { "clash_mode": "Direct", "outbound": "direct" }, { "clash_mode": "Global", "outbound": "select" } ], "auto_detect_interface": true, "override_android_vpn": true }, "outbounds": [ { "type": "selector", "tag": "select", "outbounds": [ "auto", "IP->Iran, Telegram:DeadMasteR", "IP->Main, Telegram:DeadMasteR" ], "default": "auto" }, { "type": "urltest", "tag": "auto", "outbounds": [ "IP->Iran, Telegram:DeadMasteR", "IP->Main, Telegram:DeadMasteR" ], "url": "http://cp.cloudflare.com/", "interval": "10m0s" }, { "type": "wireguard", "tag": "IP->Iran, Telegram:DeadMasteR", "local_address": [ "172.16.0.2/32", "2606:4700:110:820e:9cfa:d1d7:7b45:c80a/128" ], "private_key": "gNzo7PgmCMvegQIROiMLrSP3fZWZm85+TQQ3Y670kXE=", "server": "162.159.192.107", "server_port": 7152, "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=", "reserved": [72,106,127], "mtu": 1280, "fake_packets": "5-10" }, { "type": "wireguard", "tag": "IP->Main, Telegram:DeadMasteR", "detour": "IP->Iran, Telegram:DeadMasteR", "local_address": [ "172.16.0.2/32", "2606:4700:110:8eb4:6e90:11a8:e6c8:f496/128" ], "private_key": "OD95rgjnCbAMbp1NEs6FkeOyU2tdXxkuPlBM5zYCRXA=", "server": "162.159.192.107", "server_port": 7152, "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=", "reserved": [109,212,154], "mtu": 1280, "fake_packets": "5-10" }, { "type": "dns", "tag": "dns-out" }, { "type": "direct", "tag": "direct" }, { "type": "direct", "tag": "bypass" }, { "type": "block", "tag": "block" } ] }
+#profile-update-interval: 1
+{                                                            "route": {
+                "geoip": {                                           "path": "geo-assets\\sagernet-sing-geoip-geoip.db"                                                        },
+                "geosite": {                                         "path": "geo-assets\\sagernet-sing-geosite-geosite.db"                                                    },
+                "rules": [                                           {
+                        "inbound": "dns-in",                                 "outbound": "dns-out"
+                },                                                   {
+                        "port": 53,                                          "outbound": "dns-out"
+                },                                                   {
+                        "clash_mode": "Direct",                              "outbound": "direct"
+                },                                                   {
+                        "clash_mode": "Global",                              "outbound": "select"
+                }
+                ],
+                "auto_detect_interface": true,
+                "override_android_vpn": true
+        },
+        "outbounds": [                                               {
+                "type": "selector",
+                "tag": "select",
+                "outbounds": [
+                        "auto",
+                        "IP->Iran, Telegram:DeadMasteR",
+                        "IP->Main, Telegram:DeadMasteR"
+                ],
+                "default": "auto"
+                },
+                {
+                "type": "urltest",
+                "tag": "auto",
+                "outbounds": [
+                        "IP->Iran, Telegram:DeadMasteR",
+                        "IP->Main, Telegram:DeadMasteR"
+                ],
+                "url": "http://cp.cloudflare.com/",
+                "interval": "10m0s"
+                },
+                {
+                "type": "wireguard",
+                "tag": "IP->Iran, Telegram:DeadMasteR",
+                "local_address": [
+                        "172.16.0.2/32",
+                        "2606:4700:110:8b95:5785:4751:5e88:85d4/128"
+                ],
+                "private_key": "YIPIFWdYD33MpUc04OpLsLNLaLp1zhUglzGHWYwwdGk=",
+                "server": "162.159.192.152",
+                "server_port": 1074,
+                "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+                "reserved": [221,21,209],
+                "mtu": 1280,
+                "fake_packets": "5-10"
+                },
+                {
+                "type": "wireguard",
+                "tag": "IP->Main, Telegram:DeadMasteR",
+                "detour": "IP->Iran, Telegram:DeadMasteR",
+                "local_address": [
+                        "172.16.0.2/32",
+                        "2606:4700:110:8338:d8b1:e112:3a4f:46cd/128"
+                ],
+                "private_key": "eCMQbZ6CqVjQxqKsdn8B/YJRx8HpGrD7oqB9TF7TG3I=",
+                "server": "162.159.192.26",
+                "server_port": 859,
+                "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+                "reserved": [46,195,7],
+                "mtu": 1280,
+                "fake_packets": "5-10"
+                },
+                {
+                "type": "dns",
+                "tag": "dns-out"
+                },
+                {
+                "type": "direct",
+                "tag": "direct"
+                },
+                {
+                "type": "direct",
+                "tag": "bypass"
+                },
+                {
+                "type": "block",
+                "tag": "block"
+                }
+        ]
+        }
