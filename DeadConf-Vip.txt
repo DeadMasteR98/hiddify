@@ -1,5 +1,5 @@
 #profile-update-interval: 1
-warp://@auto/?ifp=1-3
-warp://@auto/?ifp=1-3
-warp://@auto/?ifp=1-3
-warp://@auto/?ifp=1-3
+warp://@auto/?ifp=1-3&ifpm=Dead#DeadSv-1
+warp://@auto/?ifp=1-3&ifpm=Dead#DeadSv-2
+warp://@auto/?ifp=1-3&ifpm=Dead#DeadSv-3
+warp://@auto/?ifp=1-3&ifpm=Dead#DeadSv-4
