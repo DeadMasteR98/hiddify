@@ -1,5 +1,3 @@
 #profile-update-interval: 1
 warp://162.159.192.11:7281/?ifp=1-3&ifpm=m4&&detour=warp://162.159.192.8:878/?ifp=1-3&ifpm=m4#WARP-1
 warp://162.159.192.11:7281/?ifp=1-3&ifpm=m4&&detour=warp://162.159.192.105:878/?ifp=1-3&ifpm=m4#WARP-2
-warp://162.159.192.197:878/?ifp=1-3&ifpm=m4&&detour=warp://162.159.192.23:7281/?ifp=1-3&ifpm=m4#WARP-3
-warp://162.159.192.105:7281/?ifp=1-3&ifpm=m4&&detour=warp://162.159.192.123:7281/?ifp=1-3&ifpm=m4#WARP-4
