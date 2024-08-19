@@ -1,0 +1,4 @@
+trojan://trojan@www.visa.com.sg:8880?security=none&type=ws&host=trojan.pecexoh582.workers.dev&path=%2F%3Fed%3D2560#NewSv-1
+trojan://trojan@www.visa.com.sg:8443?security=tls&type=ws&host=trojan.pecexoh582.workers.dev&sni=trojan.pecexoh582.workers.dev&fp=random&path=%2F%3Fed%3D2560#NewSv-2
+vless://77a571fb-4fd2-4b37-8596-1b7d9728bb5c@www.visa.com.sg:8880?encryption=none&security=none&type=ws&host=vless.pecexoh582.workers.dev&path=%2F%3Fed%3D2560#NewSv-3
+vless://77a571fb-4fd2-4b37-8596-1b7d9728bb5c@www.visa.com.sg:8443?encryption=none&security=tls&type=ws&host=vless.pecexoh582.workers.dev&sni=vless.pecexoh582.workers.dev&fp=random&path=%2F%3Fed%3D2560#NewSv-4
