@@ -63,203 +63,13 @@
   "log": {
     "loglevel": "warning"
   },
-  "outbounds": [
-    {
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "bpb.pecexoh582.workers.dev",
-            "port": 443,
-            "users": [
-              {
-                "encryption": "none",
-                "flow": "",
-                "id": "89b3cbba-e6ac-485a-9481-976a0415eab9",
-                "level": 8,
-                "security": "auto"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "security": "tls",
-        "sockopt": {
-          "dialerProxy": "fragment",
-          "tcpKeepAliveIdle": 100
-        },
-        "tlsSettings": {
-          "allowInsecure": false,
-          "alpn": [
-            "h2",
-            "http/1.1"
-          ],
-          "fingerprint": "chrome",
-          "serverName": "BPB.PEceXOH582.WOrkeRs.Dev",
-          "show": false
-        },
-        "wsSettings": {
-          "headers": {
-            "Host": "BPB.pECEXOH582.woRkERs.dev"
-          },
-          "path": "/Cxh3PEy7SdUWEnXj?ed=2560"
-        }
-      },
-      "tag": "proxy"
-    },
-    {
-      "protocol": "freedom",
-      "settings": {
-        "fragment": {
-          "interval": "5-10",
-          "length": "100-200",
-          "packets": "tlshello"
-        }
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "",
-        "sockopt": {
-          "tcpKeepAliveIdle": 100
-        }
-      },
-      "tag": "fragment"
-    },
-    {
-      "protocol": "dns",
-      "tag": "dns-out"
-    },
-    {
-      "protocol": "freedom",
-      "settings": {},
-      "tag": "direct"
-    },
-    {
-      "protocol": "blackhole",
-      "settings": {
-        "response": {
-          "type": "http"
-        }
-      },
-      "tag": "block"
-    }
-  ],
-  "policy": {
-    "levels": {
-      "8": {
-        "connIdle": 300,
-        "downlinkOnly": 1,
-        "handshake": 4,
-        "uplinkOnly": 1
-      }
-    },
-    "system": {
-      "statsOutboundUplink": true,
-      "statsOutboundDownlink": true
-    }
-  },
-  "remarks": "💦 BPB - Domain_1 : 443",
-  "routing": {
-    "domainStrategy": "IPIfNonMatch",
-    "rules": [
-      {
-        "inboundTag": [
-          "dns-in"
-        ],
-        "outboundTag": "dns-out",
-        "type": "field"
-      },
-      {
-        "ip": [
-          "8.8.8.8"
-        ],
-        "outboundTag": "direct",
-        "port": "53",
-        "type": "field"
-      },
-      {
-        "domain": [
-          "geosite:category-ads-all",
-          "geosite:category-ads-ir"
-        ],
-        "outboundTag": "block",
-        "type": "field"
-      },
-      {
-        "network": "tcp,udp",
-        "outboundTag": "proxy",
-        "type": "field"
-      }
-    ]
-  },
-  "stats": {}
-},
-{
-  "dns": {
-    "hosts": {
-      "geosite:category-ads-all": [
-        "127.0.0.1"
-      ],
-      "geosite:category-ads-ir": [
-        "127.0.0.1"
-      ]
-    },
-    "servers": [
-      "https://94.140.14.14/dns-query"
+  "observatory": {
+    "probeInterval": "30s",
+    "probeURL": "https://api.github.com/_private/browser/stats",
+    "subjectSelector": [
+      "frag"
     ],
-    "tag": "dns"
-  },
-  "inbounds": [
-    {
-      "port": 10808,
-      "protocol": "socks",
-      "settings": {
-        "auth": "noauth",
-        "udp": true,
-        "userLevel": 8
-      },
-      "sniffing": {
-        "destOverride": [
-          "http",
-          "tls"
-        ],
-        "enabled": true
-      },
-      "tag": "socks-in"
-    },
-    {
-      "port": 10809,
-      "protocol": "http",
-      "settings": {
-        "auth": "noauth",
-        "udp": true,
-        "userLevel": 8
-      },
-      "sniffing": {
-        "destOverride": [
-          "http",
-          "tls"
-        ],
-        "enabled": true
-      },
-      "tag": "http-in"
-    },
-    {
-      "listen": "127.0.0.1",
-      "port": 10853,
-      "protocol": "dokodemo-door",
-      "settings": {
-        "address": "1.1.1.1",
-        "network": "tcp,udp",
-        "port": 53
-      },
-      "tag": "dns-in"
-    }
-  ],
-  "log": {
-    "loglevel": "warning"
+    "EnableConcurrency": true
   },
   "outbounds": [
     {
@@ -267,7 +77,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "www.speedtest.net",
+            "address": "parsvds.com",
             "port": 443,
             "users": [
               {
@@ -285,7 +95,6 @@
         "network": "ws",
         "security": "tls",
         "sockopt": {
-          "dialerProxy": "fragment",
           "tcpKeepAliveIdle": 100
         },
         "tlsSettings": {
@@ -295,35 +104,17 @@
             "http/1.1"
           ],
           "fingerprint": "chrome",
-          "serverName": "BpB.pEceXoh582.wORkERS.Dev",
+          "serverName": "bpb.pecEXoh582.WOrkErS.DeV",
           "show": false
         },
         "wsSettings": {
           "headers": {
-            "Host": "BPB.PEcEXoh582.workERS.deV"
+            "Host": "bpB.PeCExOh582.WorKERS.DEv"
           },
-          "path": "/OeikBocxPIuCewsQ?ed=2560"
+          "path": "/Z9csP3Cj19I6b9BR?ed=2560"
         }
       },
       "tag": "proxy"
-    },
-    {
-      "protocol": "freedom",
-      "settings": {
-        "fragment": {
-          "interval": "5-10",
-          "length": "100-200",
-          "packets": "tlshello"
-        }
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "",
-        "sockopt": {
-          "tcpKeepAliveIdle": 100
-        }
-      },
-      "tag": "fragment"
     },
     {
       "protocol": "dns",
@@ -342,6 +133,258 @@
         }
       },
       "tag": "block"
+    },
+    {
+      "protocol": "freedom",
+      "proxySettings": {
+        "tag": "proxy"
+      },
+      "settings": {
+        "fragment": {
+          "interval": "1-1",
+          "length": "10-20",
+          "packets": "tlshello"
+        }
+      },
+      "tag": "frag_1"
+    },
+    {
+      "protocol": "freedom",
+      "proxySettings": {
+        "tag": "proxy"
+      },
+      "settings": {
+        "fragment": {
+          "interval": "1-1",
+          "length": "20-30",
+          "packets": "tlshello"
+        }
+      },
+      "tag": "frag_2"
+    },
+    {
+      "protocol": "freedom",
+      "proxySettings": {
+        "tag": "proxy"
+      },
+      "settings": {
+        "fragment": {
+          "interval": "1-1",
+          "length": "30-40",
+          "packets": "tlshello"
+        }
+      },
+      "tag": "frag_3"
+    },
+    {
+      "protocol": "freedom",
+      "proxySettings": {
+        "tag": "proxy"
+      },
+      "settings": {
+        "fragment": {
+          "interval": "1-1",
+          "length": "40-50",
+          "packets": "tlshello"
+        }
+      },
+      "tag": "frag_4"
+    },
+    {
+      "protocol": "freedom",
+      "proxySettings": {
+        "tag": "proxy"
+      },
+      "settings": {
+        "fragment": {
+          "interval": "1-1",
+          "length": "50-60",
+          "packets": "tlshello"
+        }
+      },
+      "tag": "frag_5"
+    },
+    {
+      "protocol": "freedom",
+      "proxySettings": {
+        "tag": "proxy"
+      },
+      "settings": {
+        "fragment": {
+          "interval": "1-1",
+          "length": "60-70",
+          "packets": "tlshello"
+        }
+      },
+      "tag": "frag_6"
+    },
+    {
+      "protocol": "freedom",
+      "proxySettings": {
+        "tag": "proxy"
+      },
+      "settings": {
+        "fragment": {
+          "interval": "1-1",
+          "length": "70-80",
+          "packets": "tlshello"
+        }
+      },
+      "tag": "frag_7"
+    },
+    {
+      "protocol": "freedom",
+      "proxySettings": {
+        "tag": "proxy"
+      },
+      "settings": {
+        "fragment": {
+          "interval": "1-1",
+          "length": "80-90",
+          "packets": "tlshello"
+        }
+      },
+      "tag": "frag_8"
+    },
+    {
+      "protocol": "freedom",
+      "proxySettings": {
+        "tag": "proxy"
+      },
+      "settings": {
+        "fragment": {
+          "interval": "1-1",
+          "length": "90-100",
+          "packets": "tlshello"
+        }
+      },
+      "tag": "frag_9"
+    },
+    {
+      "protocol": "freedom",
+      "proxySettings": {
+        "tag": "proxy"
+      },
+      "settings": {
+        "fragment": {
+          "interval": "1-1",
+          "length": "10-30",
+          "packets": "tlshello"
+        }
+      },
+      "tag": "frag_10"
+    },
+    {
+      "protocol": "freedom",
+      "proxySettings": {
+        "tag": "proxy"
+      },
+      "settings": {
+        "fragment": {
+          "interval": "1-1",
+          "length": "20-40",
+          "packets": "tlshello"
+        }
+      },
+      "tag": "frag_11"
+    },
+    {
+      "protocol": "freedom",
+      "proxySettings": {
+        "tag": "proxy"
+      },
+      "settings": {
+        "fragment": {
+          "interval": "1-1",
+          "length": "30-50",
+          "packets": "tlshello"
+        }
+      },
+      "tag": "frag_12"
+    },
+    {
+      "protocol": "freedom",
+      "proxySettings": {
+        "tag": "proxy"
+      },
+      "settings": {
+        "fragment": {
+          "interval": "1-1",
+          "length": "40-60",
+          "packets": "tlshello"
+        }
+      },
+      "tag": "frag_13"
+    },
+    {
+      "protocol": "freedom",
+      "proxySettings": {
+        "tag": "proxy"
+      },
+      "settings": {
+        "fragment": {
+          "interval": "1-1",
+          "length": "50-70",
+          "packets": "tlshello"
+        }
+      },
+      "tag": "frag_14"
+    },
+    {
+      "protocol": "freedom",
+      "proxySettings": {
+        "tag": "proxy"
+      },
+      "settings": {
+        "fragment": {
+          "interval": "1-1",
+          "length": "60-80",
+          "packets": "tlshello"
+        }
+      },
+      "tag": "frag_15"
+    },
+    {
+      "protocol": "freedom",
+      "proxySettings": {
+        "tag": "proxy"
+      },
+      "settings": {
+        "fragment": {
+          "interval": "1-1",
+          "length": "70-90",
+          "packets": "tlshello"
+        }
+      },
+      "tag": "frag_16"
+    },
+    {
+      "protocol": "freedom",
+      "proxySettings": {
+        "tag": "proxy"
+      },
+      "settings": {
+        "fragment": {
+          "interval": "1-1",
+          "length": "80-100",
+          "packets": "tlshello"
+        }
+      },
+      "tag": "frag_17"
+    },
+    {
+      "protocol": "freedom",
+      "proxySettings": {
+        "tag": "proxy"
+      },
+      "settings": {
+        "fragment": {
+          "interval": "1-1",
+          "length": "100-200",
+          "packets": "tlshello"
+        }
+      },
+      "tag": "frag_18"
     }
   ],
   "policy": {
@@ -358,206 +401,19 @@
       "statsOutboundDownlink": true
     }
   },
-  "remarks": "💦 BPB - Domain_2 : 443",
+  "remarks": "DeadConf'ADSL-3",
   "routing": {
-    "domainStrategy": "IPIfNonMatch",
-    "rules": [
+    "balancers": [
       {
-        "inboundTag": [
-          "dns-in"
+        "tag": "all",
+        "selector": [
+          "frag"
         ],
-        "outboundTag": "dns-out",
-        "type": "field"
-      },
-      {
-        "ip": [
-          "8.8.8.8"
-        ],
-        "outboundTag": "direct",
-        "port": "53",
-        "type": "field"
-      },
-      {
-        "domain": [
-          "geosite:category-ads-all",
-          "geosite:category-ads-ir"
-        ],
-        "outboundTag": "block",
-        "type": "field"
-      },
-      {
-        "network": "tcp,udp",
-        "outboundTag": "proxy",
-        "type": "field"
+        "strategy": {
+          "type": "leastPing"
+        }
       }
-    ]
-  },
-  "stats": {}
-}'
-{
-  "dns": {
-    "hosts": {
-      "geosite:category-ads-all": [
-        "127.0.0.1"
-      ],
-      "geosite:category-ads-ir": [
-        "127.0.0.1"
-      ]
-    },
-    "servers": [
-      "https://94.140.14.14/dns-query"
     ],
-    "tag": "dns"
-  },
-  "inbounds": [
-    {
-      "port": 10808,
-      "protocol": "socks",
-      "settings": {
-        "auth": "noauth",
-        "udp": true,
-        "userLevel": 8
-      },
-      "sniffing": {
-        "destOverride": [
-          "http",
-          "tls"
-        ],
-        "enabled": true
-      },
-      "tag": "socks-in"
-    },
-    {
-      "port": 10809,
-      "protocol": "http",
-      "settings": {
-        "auth": "noauth",
-        "udp": true,
-        "userLevel": 8
-      },
-      "sniffing": {
-        "destOverride": [
-          "http",
-          "tls"
-        ],
-        "enabled": true
-      },
-      "tag": "http-in"
-    },
-    {
-      "listen": "127.0.0.1",
-      "port": 10853,
-      "protocol": "dokodemo-door",
-      "settings": {
-        "address": "1.1.1.1",
-        "network": "tcp,udp",
-        "port": 53
-      },
-      "tag": "dns-in"
-    }
-  ],
-  "log": {
-    "loglevel": "warning"
-  },
-  "outbounds": [
-    {
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "188.114.96.3",
-            "port": 443,
-            "users": [
-              {
-                "encryption": "none",
-                "flow": "",
-                "id": "89b3cbba-e6ac-485a-9481-976a0415eab9",
-                "level": 8,
-                "security": "auto"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "security": "tls",
-        "sockopt": {
-          "dialerProxy": "fragment",
-          "tcpKeepAliveIdle": 100
-        },
-        "tlsSettings": {
-          "allowInsecure": false,
-          "alpn": [
-            "h2",
-            "http/1.1"
-          ],
-          "fingerprint": "chrome",
-          "serverName": "bPB.PecExOh582.WorkerS.deV",
-          "show": false
-        },
-        "wsSettings": {
-          "headers": {
-            "Host": "Bpb.pECeXoh582.wOrKeRS.deV"
-          },
-          "path": "/7blVC5RpSH0Wj6zV?ed=2560"
-        }
-      },
-      "tag": "proxy"
-    },
-    {
-      "protocol": "freedom",
-      "settings": {
-        "fragment": {
-          "interval": "5-10",
-          "length": "100-200",
-          "packets": "tlshello"
-        }
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "",
-        "sockopt": {
-          "tcpKeepAliveIdle": 100
-        }
-      },
-      "tag": "fragment"
-    },
-    {
-      "protocol": "dns",
-      "tag": "dns-out"
-    },
-    {
-      "protocol": "freedom",
-      "settings": {},
-      "tag": "direct"
-    },
-    {
-      "protocol": "blackhole",
-      "settings": {
-        "response": {
-          "type": "http"
-        }
-      },
-      "tag": "block"
-    }
-  ],
-  "policy": {
-    "levels": {
-      "8": {
-        "connIdle": 300,
-        "downlinkOnly": 1,
-        "handshake": 4,
-        "uplinkOnly": 1
-      }
-    },
-    "system": {
-      "statsOutboundUplink": true,
-      "statsOutboundDownlink": true
-    }
-  },
-  "remarks": "💦 BPB - IPv4_1 : 443",
-  "routing": {
     "domainStrategy": "IPIfNonMatch",
     "rules": [
       {
@@ -584,12 +440,12 @@
         "type": "field"
       },
       {
+        "balancerTag": "all",
         "network": "tcp,udp",
-        "outboundTag": "proxy",
+        "outboundTag": "",
         "type": "field"
       }
     ]
   },
   "stats": {}
 }
-]
