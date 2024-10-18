@@ -1,4 +1,3 @@
 #profile-update-interval: 1
-warp://[2606:4700:d0::6283:7131:7d02:c670]:0000/?ifp=10-40&ifpm=m4&&detour=warp://[2606:4700:d0::6283:7131:7d02:c670]:000/?ifp=1-3&ifpm=m4#WARP-1
-warp://[2606:4700:d1::529e:f43c:b53f:8496]:0000/?ifp=10-40&ifpm=m4&&detour=warp://[2606:4700:d0::9c65:c413:db1f:c6e4]:000/?ifp=1-3&ifpm=m4#WARP-2
-warp://[2606:4700:d1::80b1:3e93:9f2c:f26]:0000/?ifp=10-40&ifpm=m4&&detour=warp://[2606:4700:d1::f09f:4b11:e89a:ff50]:000/?ifp=1-3&ifpm=m4#WARP-3
+warp://199.0.999.999:0000/?ifp=1-3&ifpm=m4&&detour=warp://199.0.999.999:0000/?ifp=1-3&ifpm=m4#WARP-1
+warp://199.0.999.999:0000/?ifp=1-3&ifpm=m4&&detour=warp://199.0.999.999:0000/?ifp=1-3&ifpm=m4#WARP-2
